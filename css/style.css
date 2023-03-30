@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color: #222;
+    counter-reset: h2;
+    line-height: 1.5;
+    background-color: antiquewhite;
+}
+
+.container-fluid {
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 1.5em 0 0 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2em;
+    counter-reset: h3;
+}
+
+h2::before {
+    counter-increment: h2;
+    content: counter(h2)'. ';
+}
+
+h3 {
+    font-size: 1.5em;
+    counter-reset: h4;
+}
+
+h3::before {
+    counter-increment: h3;
+    content: counter(h2)'. 'counter(h3)'. ';
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h4::before {
+    counter-increment: h4;
+    content: counter(h2)'. 'counter(h3)'. 'counter(h4)'. ';
+}
+
+p {
+    margin-top: 1em;
+}
+
+.text-center {
+    text-align: center;    
+}
+
+/* Záhlaví */
+header {
+    padding: 2em 0;
+    background-image: linear-gradient(darkred, red);; 
+    color: white;   
+}
+
+/* Navigace */
+.navbar {
+    background-color: #ddd;
+}
+
+.navbar .dropdown {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.navbar .dropdown:hover {
+    color: white;
+}
+
+
+.navbar ul {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar ul li {
+    border-right: 1px solid white;
+}
+
+.navbar ul li:first-child {
+    border-left: 1px solid white;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    font-variant-caps: all-petite-caps;
+    color: #222;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover {
+    background-color: #aaa;
+    color: white; 
+}
+
+/* Layout */
+#obsah {
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+main {
+    max-width: 860px;
+    padding: 20px;    
+}
+
+aside {
+    background-color: #ddd;
+    max-width: 260px;
+    padding: 20px;
+}
+
+footer {
+    clear: both;
+}
+
+/* Obrázky */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images figure {
+    width: 33%;
+}
+
+.images figure img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+/* Audio */
+#audio {
+    position: absolute;
+    top: 300px;
+    right: 20px;
+}
+
+/* Responzivní design */
+@media only screen and (max-width: 600px) {   
+    #obsah {
+        display: block;
+    }
+    
+    main {
+        max-width: 100%;
+    }
+    
+    aside {
+        max-width: 100%;
+    }    
+
+    .navbar .dropdown {
+        display: block;
+    }
+    
+    .navbar ul {
+        display: none;
+    }
+    
+    .navbar ul li {
+        border: none;
+        border-bottom: 1px solid white;
+    }        
+
+    .navbar ul li:first-child {
+        border-left: none;
+    }    
+
+    #audio {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    
+    .images figure {
+        width: 100%;
+    }    
+}
+
+thead{
+    background-color: rgb(30, 150, 180);
+    color: white;
+    text-align: center;
+  
+}
+#hlava{
+    background-color: rgb(50, 65, 200);
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+  th, td{
+    width:  150px;
+    height: 30px;
+    vertical-align: middle;
+    padding-left: 10px;
+   
+  }
+.text{
+    text-align: end;
+}
+.strong{
+    font-weight: bold;
+   
+}
+#cu{
+    text-align: center;
+}
+.red{
+    color: red;
+    text-align: right;
+}
+#back{
+    background-color: grey;
+}
+.t1{
+    width: 400px;
+}
+.t2{
+    width: 600px;
+}
+.kod{
+    text-align: left;
+}

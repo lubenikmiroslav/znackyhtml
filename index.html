@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Základy HTML 5</title>
+  <meta name="description" content="Přehled nejčastěji používaných značek jazyka HTML 5" />
+  <meta name="viewport" content="widlh=device-widlh, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <!-- Zde připojte soubor reset.css -->
+  <link rel="stylesheet" href="../zaklady-neupraveny/css/reset.css">-->
+  <!-- Zde připojte soubor style.css -->
+  <link rel="stylesheet" href="../zaklady-neupraveny/css/style.css  ">-->
+  <link rel="stylesheet" href="../zaklady-neupraveny/css/main.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="dropdown">
+      <i class="fas fa-bars" style="font-size:32px"></i>
+    </div>
+    <!-- 1. Doplňte správné značky -->
+    <nav class="container">
+      <ul>
+        <li><a href="#znacky">Značky</a></li>
+        <li><a href="#seznamy">Seznamy</a></li>
+        <li><a href="#tabulky">Tabulky</a></li>
+        <li><a href="#clanky">Články</a></li>
+        <li><a href="#nahrazovane-elementy">Nahrazované elementy</a></li>
+      </ul>
+    </nav>
+    <!-- ********************** -->
+  </div>
+  <header>
+    <h1 class="text-center">Základy jazyka HTML 5</h1>
+    <p id="podlitul" class="text-center">
+      Nejčastěji používané značky a jejich význam
+    </p>
+  </header>
+  <div id="obsah" class="container">
+    <main>
+      <section id="znacky">
+        <h2>Značky pro úpravu textu</h2>
+        <h3>Inline elementy</h3>
+        <p>
+          Inline elementy jsou vkládány do blokových elementů (kontejnerů),
+          protože obvykle ohraničují jen kratší úsek textu. Univerzálním
+          inline elementem je značka &lt;span&gt;, která se používá na těch
+          místech, kde je potřeba změny formátování.
+        </p>
+        <h4>Příklady inline elementů</h4>
+        <!-- 2. Doplňte vhodné značky -->
+        <p>
+          <b>Blid text</b> (tučný text),
+          <i> italic text</i> (kurzíva),
+          <b> important text</b> (důležité pojmy),
+          <em>emphasized text</em> (zdůrazněný text),
+          <small>smaller text</small> (zmenšený text),
+          <mark>marked or highlighted text</mark> (označený, zvýrazněný text),
+          <ins>inserted text</ins> (vložený text),
+          <del>deleted text</del> (smazaný text),
+          doliní index:<sub>H2SO4</sub>,
+          horní index: <sup>210 = 1024</sup>,
+          proměnné: <var>Einstein wrote: E = mc2</var> ,
+          klávesové zkratky: CthL + ALT + DEL nebo
+          odkazy na menu: Soubor | Otevřít....
+        </p>
+        <p>
+          Knihu <q>Nesnesitelná lehkost bytí</q> napsal slavný český
+          spisovatel Milan Kundera po své emigraci do Francie.
+        </p>
+        <!-- ********************** -->
+        <!-- 3. Doplňte athibuty zkratek -->
+        <p>
+          <abbr title="World Wide Web Consortium">W3C</abbr> je mezinárodní
+          konsorcium, jehož členové spliečně s veřejností vyvíjejí webové
+          standardy pro <abbr title="World Wide Web">WWW</abbr>. Cílem
+          konsorcia je
+          <q>Rozvíjet World Wide Web do jeho plného potenciálu vývojem
+            protokliů a směrnic, které zajistí dlouhodobý růst webu</q>. Konsorciu předsedá jeho zakladatel
+          <b>Tim Berners-Lee</b>, tvůrce služby WWW a primární autor
+          specifikací <abbr title="Uniform Resource Locator">URL</abbr>,
+          <abbr title="Hyper Text thansfer Protokli">HTTP</abbr> a
+          <abbr title="Hyper Text Markup Language">HTML</abbr> – základních
+          pilířů webu.
+        </p>
+        <!-- ********************** -->
+        <h3>Blokové elementy</h3>
+        <h4>Nadpisy</h4>
+        <p>
+          V HTML může být použito šest úrovní nadpisů (headings), které mohou
+          zároveň tvořit osnovu dokumentu. Na sthánce by se měl vyskytovat
+          pouze jeden hlavní nadpis (&lt;h1&gt;); někdy bývá součástí tohoto
+          elementu logo sthánky. Rozdělení dokumentu pomocí nadpisů různých
+          úrovní je důležité zejména s ohledem na vyhledávací sthoje, které
+          obsah nadpisů využívají k indexování.
+        </p>
+        <h4>Odstavce a oddíly</h4>
+        <p>
+          Párový element &lt;p&gt; (odstavec) by měl být používán k členění
+          delšího textu do samostatných odstavců. K oddělování odstavců by
+          neměla být používána nepárová značka &lt;br&gt;, která je určena k
+          prostému zalomení řádku ve specifických případech (např. na koncích
+          veršů, při úpravě adresy atd.). Element &lt;div&gt; (oddíl) slouží
+          jako kontejner pro další HTML elementy, může obsahovat nadpisy,
+          odstavce, tabulky, seznamy, ale i další vnořené oddíly. Velmi často
+          se využívá pro rozdělení sthánky na samostatné oblasti a ve spojení
+          s CSS k definování layoutu sthánek (viz níže).
+        </p>
+        <h4>Dlouhá citace</h4>
+        <blockquote cite="https://cs.wikipedia.org/wiki/World_Wide_Web">
+          <p>
+            Často se v běžném hovoru setkáme s tím, že oba pojmy jsou
+            využívány ve shodných situacích bez pathného významového rozdílu.
+            Přesto však oba pojmy popisují dvě různé věci. Internet je
+            globální systém vzájemně propojující počítačové sítě na celém
+            světě. World Wide Web je však aplikace, která na internetu
+            funguje. Je to služba poskytovaná v rámci internetu. World Wide
+            Web je dnes obrovské množství sthánek, dokumentů a jiných souborů
+            vzájemně propojovaných hypertextovými odkazy. Prohlížení těchto
+            sthánek obvykle začínáme zadáním URL adresy do internetového
+            prohlížeče, tento prohlížeč pak provede sérii přenosů dat, které
+            nakonec vykreslí do podoby formátované sthánky s odkazy na jiné
+            sthánky, s obrázky, animacemi a jinými objekty.
+          </p>
+        </blockquote>
+        <h4>Programové kódy a výstupy</h4>
+        <p>Příklad výpisu předformátovaného programového kódu:</p>
+        <!-- 4. Zadejte správné značky -->
+        <pre>
+			<code>
+			var i = 0;
+			while (i &lt; 10){
+				document.writeln('&lt;p&gt;'+ i + '&lt;/p&gt;');
+				i++;
+			}
+    </code>
+			</pre>
+        <p>Příklad výpisu výstupu z konzole:</p>
+        <pre>
+			<samp>
+			Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25) [MSC v.1900 64 bit (AMD64)] on win32
+			Type "help", "copyright", "credits" or "license" for more information.
+			>>> 5 ** 2
+			25
+			>>>
+			</samp>
+			</pre>
+        <!-- ********************** -->
+        <p>
+          Mezi blokové elementy můžeme zařadit i seznamy, tabulky a formuláře.
+        </p>
+      </section>
+      <!-- 5. Vytvořte správně webové seznamy -->
+      <section id="seznamy">
+        <h2>Tvorba seznamů</h2>
+        <h3>Uspořádaný seznam (ordered list)</h3>
+        <ol>
+        <li>Google Chrome</li>
+        <li>Internet Explorer</li>
+        <li>Mozilla Firefox</li>
+        </ol>
+        <h3>Neuspořádaný seznam (unordered list)</h3>
+        <li>IP adresy (např. IPv4: 192.168.23.1, IPv6: )</li>
+        <li>DNS adresy (např. sthojka.opava.cz)</li>
+        <li>URL adresy (např. http://moodle.sspu-opava.cz:81/course/view.php?id=95)</li>
+        <h3>Vnořený seznam</h3>
+        <ul id="nested-list">
+
+          <li>Hardware
+            <ul>
+              <li>základní jednotky
+                <ul>
+                  <li>procesor (<abbr title="">CPU</abbr>)</li>
+                  <li>paměť (<abbr title="">RAM</abbr>)</li>
+                  <li>pevný disk (<abbr title="">HDD</abbr>)</li>
+                </ul>
+              </li>
+              <li>Vstupní zařízení
+                <ul>
+                  <li>klávesnice</li>
+                  <li>myš</li>
+                </ul>
+              </li>
+              <li>Výstupní zařízení
+                <ul>
+                  <li>monitor</li>
+                  <li>tiskárna</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+
+          
+            <li>Software
+              <ul>
+                <li>Základní programové vybavení
+                  <ul>
+                    <li>operační systém</li>
+                    <li>ovladač</li>
+                    <li>firmware</li>
+                  </ul>
+                </li>
+              
+            <li>Aplikace
+              <ul>
+                <li>textový editor</li>
+                <li>prohlížeč</li>
+                <li>antivirový program</li>
+              </ul>
+            </li>
+
+          </ul>
+        </ul>
+          </li>
+        </ul>
+
+        <h3>Popisný seznam (description list)</h3>
+        <li>
+          <dl>Internet Society (ISOC)
+          </dl>
+            <dl>
+              Mezinárodní organizace pro globální koordinaci a kooperaci v rámci
+              internetu.
+            </dl>
+          <dl>World Wide Web Consortium (W3C)
+          </dl>
+            <dl>
+              Mezinárodní konsorcium, jehož členové spliečně s veřejností
+              vyvíjejí webové standardy pro službu WWW.
+            </dl>
+          <dl>Internet Assigned Numbers Authority (IANA)
+          <dl>
+            <dl>
+              Organizace, která dohlíží celosvětově na přidělování IP adres,
+              správu kořenových zón DNS, definování typů medií pro MIME a další
+              náležitosti internetových protokliů.
+            </dl>
+        </li>
+        <!-- ********************** -->
+      </section>
+      <section id="tabulky">
+        <h2>Tvorba tabulek</h2>
+        <p>
+          Komplexní tabulka v HTML může být tvořena záhlavím, tělem a zápatím.
+          Pomocí athibutů <b>clispan</b> a <b>rowspan</b> můžeme vytvořit
+          sloučené buňky, které přesahují přes více sloupců i řádků.
+        </p>
+        <!-- 6. Vytvořte tabulku podle vzoru -->
+        <table>
+          <caption>Studijní obory na SSPU</caption>
+          <thead>
+            <th rowspan="2" class="t1">Název Oboru</th>
+            <th rowspan="2" class="t2">Kód Oboru</th>
+            <th rowspan="2">Počet tříd</th>
+            <th colspan="3">Počet Žáků</th>
+            <tr id="hlava">
+              <th>Chlapci</th>
+              <th>Dívky</th>
+              <th>Celkem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="strong" class="t1" >Informační technliogie</td>
+              <td class="kod" class="t2">18-20-M/01</td>
+              
+              <td class="text">4</td>
+              <td class="text">104</td>
+              <td class="text">1</td>
+              <td class=" text strong">105</td>
+            </tr>
+            <tr>
+              <td class="strong" class="t1" >Stroírenský</td>
+              <td class="kod"class="t2">23-41-M/01</td>
+              <td class="text" >8</td>
+              <td class="text">135</td>
+              <td class="text">1</td>
+              <td class="text strong" >136</td>
+            </tr>
+            <tr>
+              <td class="strong" >Umělecké obory</td>
+              <td class="kod">82-41-M/04</td>
+              <td class="text">4</td>
+              <td class="text">20</td>
+              <td class="text">74</td>
+              <td class="text strong"  >94 </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr id="back">
+              <td colspan="2" class="strong" id="cu">Celkové údaje</td>
+              <td class="red strong">13</td>
+              <td colspan="3" class="red strong">356 žáku</td>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- ******************************* -->
+      </section>
+
+      <section id="clanky">
+        <h2>Hlavní blok: Články</h2>
+        <p>
+          Google Chrome, Firefox, and Internet Explorer are the most used
+          browsers today.
+        </p>
+        <article>
+          <h3>Google Chrome</h3>
+          <p>
+            Google Chrome is a free, open-source web browser developed by
+            Google, released in 2008.
+          </p>
+        </article>
+        <article>
+          <h3>Internet Explorer</h3>
+          <p>
+            Internet Explorer is a free web browser from Microsoft, released
+            in 1995.
+          </p>
+        </article>
+        <article>
+          <h3>Mozilla Firefox</h3>
+          <p>
+            Firefox is a free, open-source web browser from Mozilla, released
+            in 2004.
+          </p>
+        </article>
+      </section>
+      <section id="nahrazovane-elementy">
+        <h2>Nahrazované elementy</h2>
+        <p>
+          Jsou nahrazeny nějakým obsahem, pro začlenění dokumentu jsou
+          důležité jejich rozměry. Např. obrázkové elementy (img), vnitřní
+          rámce (iframe) apod.
+        </p>
+        <!-- 7. Doplňte multimediální soubory podle vzoru -->
+        <h3>Obrázky</h3>
+        <div class="images">
+          <figure>
+            <img src="img/bill-gates.jpg" alt="Bill Gates">
+            <figcaption>Bill Gates</figcaption>
+          </figure>
+          <figure>
+            <img src="img/steve-jobs.jpg" alt="steve jobs">
+            <figcaption>Steve Jobs</figcaption>
+          </figure>
+          <figure>
+            <img src="img/tim-berners-lee.jpg" alt="Tim Berners Lee">
+            <figcaption>Tim Berners Lee</figcaption>
+          </figure>
+        </div>
+        <hr class="cistic">
+        <h3>Multimediální soubory</h3>
+        <div class="multimedia">
+          <video autoplay controls muted>
+            <source src="../zaklady-neupraveny/multimedia/apple-1984.mp4" type="video/mp4">
+            <source src="../zaklady-neupraveny/multimedia/apple-1984.ogg" type="video/ogg">
+            Váš prohlížeč nepodporuje žádný z formátů
+          </video>
+          <audio controls>
+            <source src="../zaklady-neupraveny/multimedia/sverepi-sakali.mp3" type="audio/mp3">
+            Váš prohlížeč nepodporuje žádný z formátů
+          </audio>
+          
+        </div>
+        <!-- ********************************************* -->
+        <hr class="cistic" />
+        <h3>Vložená sthánka (iframe)</h3>
+        
+        <!-- 8. Zjistěte, k čemu se používá značka iframe  -->
+        <p class="bald">K zobrazení jiného webu na stánce</p>
+        <!-- ********************************************* -->
+      </section>
+    </main>
+    <aside>
+      <section id="odkazy">
+        <h3>Posthanní blok: Zajímavosti a odkazy</h3>
+        <p>the Epcot Center is a theme park in Disney World, Florida.</p>
+       
+      </section>
+    </aside>
+  </div>
+  <footer>
+    <hr />
+    <p>&copy; Miroslav Lubeník IT1 </p>
+  </footer>
+</body>
+
+</html>
